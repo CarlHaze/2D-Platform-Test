@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://brpccupu8f0r2"]
+[gd_scene load_steps=9 format=3 uid="uid://brpccupu8f0r2"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_bdqtf"]
-[ext_resource type="Texture2D" uid="uid://c2jc8nblfs0bh" path="res://Purple.png" id="2_dtm0a"]
-[ext_resource type="Texture2D" uid="uid://bub0gqcqmvtvi" path="res://Terrain (16x16).png" id="3_n0ajv"]
+[ext_resource type="Texture2D" uid="uid://c2jc8nblfs0bh" path="res://objects/Purple.png" id="2_dtm0a"]
+[ext_resource type="Texture2D" uid="uid://bub0gqcqmvtvi" path="res://objects/Terrain (16x16).png" id="3_n0ajv"]
 [ext_resource type="PackedScene" uid="uid://dnnphnv2lkqkx" path="res://scene/main_character.tscn" id="4_1e2dd"]
+[ext_resource type="PackedScene" uid="uid://dgdcgvsfs18id" path="res://scene/collectable.tscn" id="6_lm13g"]
 [ext_resource type="PackedScene" uid="uid://c52uvum43rbgk" path="res://scene/trophy_end.tscn" id="6_oahjp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mghy0"]
@@ -563,7 +564,7 @@ position_smoothing_speed = 10.0
 [node name="CollectablesGroup" type="Node" parent="SceneObjects"]
 
 [node name="TrophyEnd" parent="SceneObjects" instance=ExtResource("6_oahjp")]
-position = Vector2(2771, 255)
+position = Vector2(2762, 400)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -585,3 +586,30 @@ theme_override_font_sizes/font_size = 24
 text = "Points: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Collectable" parent="." instance=ExtResource("6_lm13g")]
+position = Vector2(162, 460)
+
+[node name="Collectable2" parent="." instance=ExtResource("6_lm13g")]
+position = Vector2(470, 414)
+
+[node name="Collectable3" parent="." instance=ExtResource("6_lm13g")]
+position = Vector2(824, 412)
+
+[node name="Collectable4" parent="." instance=ExtResource("6_lm13g")]
+position = Vector2(1064, 124)
+
+[node name="Collectable5" parent="." instance=ExtResource("6_lm13g")]
+position = Vector2(1573, 414)
+
+[node name="Collectable6" parent="." instance=ExtResource("6_lm13g")]
+position = Vector2(1793, 173)
+
+[node name="Collectable7" parent="." instance=ExtResource("6_lm13g")]
+position = Vector2(2145, 323)
+
+[node name="Collectable8" parent="." instance=ExtResource("6_lm13g")]
+position = Vector2(2524, 172)
+
+[node name="Collectable9" parent="." instance=ExtResource("6_lm13g")]
+position = Vector2(2387, 554)

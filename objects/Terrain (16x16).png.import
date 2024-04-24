@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7p5t28i04su2"
-path="res://.godot/imported/Strawberry.png-1f932bad024cb16b334b051a3019e1e3.ctex"
+uid="uid://bub0gqcqmvtvi"
+path="res://.godot/imported/Terrain (16x16).png-56c43c4d577a06ee09c4f22cb07f191b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Strawberry.png"
-dest_files=["res://.godot/imported/Strawberry.png-1f932bad024cb16b334b051a3019e1e3.ctex"]
+source_file="res://objects/Terrain (16x16).png"
+dest_files=["res://.godot/imported/Terrain (16x16).png-56c43c4d577a06ee09c4f22cb07f191b.ctex"]
 
 [params]
 

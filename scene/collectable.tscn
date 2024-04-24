@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://dgdcgvsfs18id"]
 
-[ext_resource type="Texture2D" uid="uid://7p5t28i04su2" path="res://Strawberry.png" id="1_81ohb"]
+[ext_resource type="Texture2D" uid="uid://7p5t28i04su2" path="res://objects/Strawberry.png" id="1_81ohb"]
 [ext_resource type="Script" path="res://scene/collectable.gd" id="1_ddrk6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bkvd8"]

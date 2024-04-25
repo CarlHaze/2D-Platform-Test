@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwy6jf61j7ppi"]
+
+[ext_resource type="Script" path="res://scene/main_menu.gd" id="1_a320e"]
+[ext_resource type="Texture2D" uid="uid://ddrs1h36s10di" path="res://objects/Green.png" id="1_hpjgf"]
+[ext_resource type="Texture2D" uid="uid://doua7toesm1ko" path="res://objects/2D Platformer.png" id="2_3flmr"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_a320e")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hpjgf")
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -35.0
+offset_right = 171.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3flmr")
+
+[node name="level1" type="Button" parent="."]
+offset_left = 310.0
+offset_top = 435.0
+offset_right = 469.0
+offset_bottom = 503.0
+theme_override_font_sizes/font_size = 30
+text = "Level: 1"
+
+[node name="level2" type="Button" parent="."]
+offset_left = 645.0
+offset_top = 435.0
+offset_right = 804.0
+offset_bottom = 503.0
+theme_override_font_sizes/font_size = 30
+text = "Level: 2"
+
+[connection signal="pressed" from="level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]

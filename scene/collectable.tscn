@@ -1,7 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://dgdcgvsfs18id"]
+[gd_scene load_steps=30 format=3 uid="uid://dgdcgvsfs18id"]
 
 [ext_resource type="Texture2D" uid="uid://7p5t28i04su2" path="res://objects/Strawberry.png" id="1_81ohb"]
 [ext_resource type="Script" path="res://scene/collectable.gd" id="1_ddrk6"]
+[ext_resource type="Texture2D" uid="uid://btlpgbpc0s1a7" path="res://objects/sprites/Collected.png" id="3_sraxi"]
+[ext_resource type="AudioStream" uid="uid://bknuxo3d55giy" path="res://audio/POP_Mouth_Darker_mono.wav" id="4_c8ljm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bkvd8"]
 atlas = ExtResource("1_81ohb")
@@ -71,6 +73,30 @@ region = Rect2(480, 0, 32, 32)
 atlas = ExtResource("1_81ohb")
 region = Rect2(512, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fujqr"]
+atlas = ExtResource("3_sraxi")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgusd"]
+atlas = ExtResource("3_sraxi")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvm3k"]
+atlas = ExtResource("3_sraxi")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_152dy"]
+atlas = ExtResource("3_sraxi")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dr1fx"]
+atlas = ExtResource("3_sraxi")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bd78"]
+atlas = ExtResource("3_sraxi")
+region = Rect2(160, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_yf5ew"]
 animations = [{
 "frames": [{
@@ -128,6 +154,29 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fujqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgusd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvm3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_152dy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dr1fx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bd78")
+}],
+"loop": true,
+"name": &"oncollect",
+"speed": 20.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rji63"]
@@ -140,9 +189,15 @@ script = ExtResource("1_ddrk6")
 texture_filter = 1
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_yf5ew")
+animation = &"oncollect"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_rji63")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_c8ljm")
+volume_db = -12.146
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

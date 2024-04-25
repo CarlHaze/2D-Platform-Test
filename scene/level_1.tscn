@@ -479,7 +479,7 @@ script = ExtResource("1_7gc1i")
 
 [node name="TextureRect" type="TextureRect" parent="SceneObjects"]
 texture_filter = 1
-offset_right = 2881.0
+offset_right = 2861.0
 offset_bottom = 720.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -530,7 +530,7 @@ position = Vector2(2456, 118)
 position = Vector2(1876, 351)
 
 [node name="Collectable10" parent="SceneObjects/CollectablesGroup" instance=ExtResource("5_hqfn2")]
-position = Vector2(1947, 287)
+position = Vector2(2145, 326)
 
 [node name="TrophyEnd" parent="SceneObjects" instance=ExtResource("6_lv27j")]
 position = Vector2(2771, 255)
